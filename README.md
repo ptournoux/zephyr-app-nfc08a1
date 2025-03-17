@@ -86,5 +86,27 @@ Then run :
 west build --board=nucleo_l073rz -p always zephyr-app-nfc08a1
 ```
 
+Connect your `nucleo_l073rz` board to your computer and run ẁest flash`.
+
+Read the logs through picocom : 
+
+```
+sudo picocom -b 115200 /dev/ttyACM0
+```
+
+The output should look like below : 
+
+```
+NFCA Passive ISO-DEP device found. UID: 04616F42146680
+ Select NDEF Application: OK Data: 6A82
+NFCA Passive ISO-DEP device found. UID: 04616F42146680
+ Select NDEF Application: OK Data: 6A82
+NFCA Passive ISO-DEP device found. UID: 04615E42146680
+ Select NDEF Application: OK Data: 6A82
+NFCA Passive ISO-DEP device found. UID: 04615E42146680
+ Select NDEF Application: OK Data: 6A82
+```
+
+## Special thanks to ....
 
 Both the module and sample application comes from https://github.com/vouch-opensource/zephyr-nfc08a1 with some minor modifications to make them compatible with Zephyr 4.
