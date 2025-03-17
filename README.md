@@ -28,6 +28,7 @@ west update
 
 ## Add a st,st25r SPI to your device configuration
 
+If you do not use a `nucleo_l073rz` board, you may need to configure your device tree/overlay so that the `st,st25,` module can find the SPI/I2C configuration on your board.
 
 To use, after incorporating the module into your build, add an 
 `st,st25r` compatible SPI or I2C configuration to your device tree
